@@ -1,0 +1,81 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainMapFragmentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hqs.alx.hqsmapproject.MyMapFragment">
+
+    <FrameLayout
+        android:id="@+id/mapLayoutFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/parentRelLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp">>
+
+        <RelativeLayout
+            android:id="@+id/relLayoutFragment"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/white_border"
+            android:elevation="10dp">
+
+            <ImageView
+                android:id="@+id/searchFragmentIV"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_search" />
+
+            <AutoCompleteTextView
+                android:id="@+id/input_searchFragment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/searchFragmentIV"
+                android:background="@null"
+                android:hint="@string/serach_hint"
+                android:imeOptions="actionSearch"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/gpsIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/relLayoutFragment"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_gps" />
+
+        <ImageView
+            android:id="@+id/optionsIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_options"
+            android:layout_below="@+id/relLayoutFragment"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"/>
+    </RelativeLayout>
+
+</FrameLayout>
